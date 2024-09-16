@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style type="text/css">
+        /* Custom cursor */
+        body {
+            cursor: url('data:image/x-icon;base64,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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD////////////////////x////A////gD///4A///8AP///AD///wA///8Af//+AP///AD///wB///8Af/4AAP/+eAD//noB//54Af/AAAD4AAAAOAAAADgAAAAwAAAAOAAAADgAAAA////////////////////////////////w=='), auto; 
+        }
+
+        /* Loader */
+        #loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Spinner style */
+        .spinner {
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #800080;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Spinner animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('backround.gif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Login box styles */
+        .login-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            animation: fadeIn 2s ease;
+            display: none;
+        }
+
+        /* Fade in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Input hover/active animation */
+        input[type="text"]:hover, input[type="password"]:hover,
+        input[type="text"]:focus, input[type="password"]:focus {
+            transform: scale(1.02);
+            box-shadow: 0px 5px 15px rgba(128, 0, 128, 0.5);
+        }
+
+        button {
+            background-color: #800080;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #6a006a;
+        }
+
+        /* Footer style */
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-family: 'Sevillana', cursive;
+            font-size: 14px;
+            color: #800080;
+            animation: fadeIn 2s ease;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap">
+</head>
+<body onload="showLoader()">
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="login-box" id="login-box">
+        <h2>Prihlásiť sa</h2>
+        <form onsubmit="return validateLogin()">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Získať hacky</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        BY<span style="font-family: 'Sevillana', cursive;">Dr. Pepo</span>
+    </div>
+
+    <script>
+        function showLoader() {
+            setTimeout(function() {
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('login-box').style.display = 'block';
+            }, 2000); // Simulated loader delay of 2 seconds
+        }
+
+        function validateLogin() {
+            const allowedUsers = ['butora', 'kelcik', 'cingac', 'tkacik', 'novak', 'zahora'];
+            const correctPassword = '1003063';
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (allowedUsers.includes(username) && password === correctPassword) {
+                window.location.href = 'https://bit.ly/hackybydrpepo';
+                return false;
+            } else {
+                alert('Nesprávne prihlasovacie údaje!');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
